@@ -1,0 +1,17 @@
+<div class="container">
+  <input
+    type="number"
+    [(ngModel)]="inputValue"
+    placeholder="Enter number of items"
+  />
+  <button (click)="generateItems()">Generate List</button>
+
+  <div class="list">
+    <div
+      *ngFor="let item of items"
+      class="item"
+    >
+      <h1>{{ item.title }}</h1>
+    </div>
+  </div>
+</div>
